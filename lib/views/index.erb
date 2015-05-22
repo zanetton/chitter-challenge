@@ -1,0 +1,12 @@
+<ul>
+  <% @peeps.each do |peep| %>
+    <li><a href='<%= peep.message %>'><%= peep.chitname %></a></li>
+  <% end %>
+</ul>
+<div id='new-peep'>
+  <form action='/peeps' method='post'>
+    Message: <input type='text' name='message'>
+    Chitname: <input type='text' name='chitname'>
+    <input type='submit' value='Add peep'>
+  </form>
+</div>
